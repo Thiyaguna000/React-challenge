@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "React take home challenge",
   "main": "index.js",
-  "homepage": "https://thiyaguna000.github.io/moviedb",
+  "homepage": "https://thiyaguna000.github.io/React-challenge",
   "scripts": {
     "webpack": "webpack",
     "start": "webpack serve",
