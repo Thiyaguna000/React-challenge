@@ -1,0 +1,117 @@
+.featured_movie_container {
+    margin: 4vh auto 6vh auto;
+    width: 75%;
+    height: 82vh;
+    display: flex;
+    padding-top: 100px;
+}
+
+@media screen and (max-width: 600px) {
+    .featured_movie_container {
+        width: 95%;
+        height: 110vh;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.featured_movie_info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.featured_movie_info .movie_title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 6vh;
+}
+
+.featured_movie_info .movie_tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 3.5vh;
+    color: goldenrod;
+    margin: 0.5vh 0;
+}
+
+.featured_movie_info .movie_overview {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 2vh;
+    margin: 0.5vh 0;
+}
+
+@media screen and (max-width: 600px) {
+    .featured_movie_info {
+        padding-right: 0;
+    }
+
+    .featured_movie_info .movie_title {
+        font-size: 4vh;
+        margin-top: 1vh;
+    }
+
+    .featured_movie_info .movie_tagline {
+        font-size: 2.5vh;
+    }
+
+    .featured_movie_info .movie_overview {
+        font-size: 1.75vh;
+    }
+
+    .featured_movie_info .rating {
+        font-size: 2.75vh;
+    }
+
+    .featured_movie_info .rating .star_icon {
+        font-size: 2.75vh;
+    }
+
+    .featured_movie_info .rating .star_icon_empty {
+        font-size: 2.75vh;
+    }
+}
+
+.featured_movie_poster { 
+    flex: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 150px;
+}
+
+.featured_movie_rating {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3vh;
+    margin-bottom: 3vh;
+}
+
+.featured_movie_rating .movie_average {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 2.5vh;
+    display: inline-block;
+    padding-left: 1vh;
+}
+
+.featured_movie_rating .stars {
+    color: goldenrod;
+    font-size: 2.75vh;
+    padding-top: 1vh;
+}
+
+.featured_movie_rating .stars .star {
+    color: goldenrod;
+    padding: 0.15vh;
+}
+
+@media screen and (max-width: 600px) {
+    .featured_movie_rating {
+        font-size: 2.75vh;
+    }
+
+    .featured_movie_rating .stars {
+        font-size: 2.75vh;
+    }
+}

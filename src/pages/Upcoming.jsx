@@ -5,12 +5,12 @@ import Pagination from "../components/Pagination/Pagination";
 import { Button } from "../components/Button/Button";
 import { Input } from "../components/Input/Input";
 
-export const Home = () => {
-  const [moviesList, setMoviesList] = useState([]);
+export const Upcoming = () => {
+  const [upcomingList, setUpcomingList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchValue, setSearchValue] = useState("");
-  const movieURL = `https://api.themoviedb.org/3/movie/popular?api_key=7009bcbd203a44c230df630f8447bbc9&language=en-US&page=1`;
-
+  const movieURL = `https://api.themoviedb.org/3/movie/upcoming?api_key=7009bcbd203a44c230df630f8447bbc9&language=en-US&page=1`;
+  
   useEffect(() => {
     getMoviesList();
   }, []);
@@ -19,7 +19,7 @@ export const Home = () => {
     axios
       .get(movieURL)
       .then((res) => {
-        setMoviesList(res.data.results);
+        setUpcomingList(res.data.results);
       })
       .catch((error) => {
         console.log(error);
@@ -29,13 +29,10 @@ export const Home = () => {
   const paginate = (pageNumber) => {
     event.preventDefault();
     axios
-      .get(
-        `https://api.themoviedb.org/3/movie/popular?api_key=7009bcbd203a44c230df630f8447bbc9&language=en-US&page=${pageNumber}`
-      )
+      .get(`https://api.themoviedb.org/3/movie/upcoming?api_key=7009bcbd203a44c230df630f8447bbc9&language=en-US&page=${pageNumber}`)
       .then((res) => {
         setCurrentPage(pageNumber);
-        console.log(res.data.results)
-        setMoviesList(res.data.results);
+        setUpcomingList(res.data.results);
       })
       .catch((error) => {
         console.log(error);
@@ -55,11 +52,9 @@ export const Home = () => {
     }
   };
 
-  console.log(moviesList)
-
   return (
     <>
-      <h1 className="home_header">Popular Movies</h1>
+      <h1 className="home_header">Upcoming</h1>
       <div>
         <form style={{ margin: "30px 0px" }}>
           <Input
@@ -76,16 +71,16 @@ export const Home = () => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          flexWrap: "wrap",
+          flexWrap: "wrap"
         }}
       >
-        {moviesList.map((item, index) => (
-          <Card list={item} key={index} />
-        ))}
+        {upcomingList.map((item, index) => (
+            <Card list={item} key={index} />
+          ))}
       </div>
-      {moviesList.length > 0 && <Pagination paginate={paginate} />}
+      {upcomingList.length > 0 && <Pagination paginate={paginate} />}
     </>
   );
 };
 
-export default Home;
+export default Upcoming;

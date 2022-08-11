@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ecedf2;
+  margin: 2rem;
+}
+.card {
+  height: auto;
+  width: 250px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+.top_part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.circle {
+  display: flex;
+}
+.circle span {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #ccecfe;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: all 0.5s;
+  border: 1px solid #ccecfe;
+}
+.circle span:hover {
+  border: 2px solid #c7e9ff;
+  background-color: #51bdfe;
+}
+.top_part small {
+  height: 25px;
+  width: 25px;
+  background-color: #efefef;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top_part small i {
+  margin-top: 2px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.fa-heart {
+  color: red;
+  margin-top: 2px;
+}
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image img {
+  width: 150px;
+  margin-bottom: 30px;
+}
+.vitamin {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.reviews {
+  margin-top: 5px;
+}
+.reviews p {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9f9f9f;
+}
+.reviews u {
+  font-size: 11px;
+  color: red;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.size p {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9f9f9f;
+}
+.size h5 {
+  margin-top: 10px;
+}
+
+.card h4 {
+  margin-top: 10px;
+}
+
+.qty_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 135px;
+  border-radius: 25px;
+  background-color: #eff0f2;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.qty_btn:hover {
+  background-color: #9d9fa3;
+}
+.qty_btn p {
+  padding: 0 15px;
+  font-weight: 700;
+}
+.money_bag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.money_bag h3 {
+  margin-right: 5px;
+}
+.money_bag #button {
+  width: 100%;
+}
+.money_bag button:hover {
+  background-color: #107bbb;
+}
+.money_bag button i {
+  margin-right: 5px;
+}
+
+.price {
+  padding-top: 10px;
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 100%;
+}
+
+.last_buttons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+}
+
+.popularity{
+    background: -webkit-linear-gradient(#4cc51c, #05fc19);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
