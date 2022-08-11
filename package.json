@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "description": "React take home challenge",
   "main": "index.js",
+  "homepage": "https://thiyaguna000.github.io/moviedb",
   "scripts": {
     "webpack": "webpack",
     "start": "webpack serve",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "test": "jest"
+    "test": "jest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "serve": "react-scripts start",
+    "build": "react-scripts build"
   },
   "author": "",
   "license": "ISC",
