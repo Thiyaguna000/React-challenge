@@ -1,18 +1,24 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import Card from "../components/Card";
-import Pagination from "../components/Pagination/Pagination";
-import { Button } from "../components/Button/Button";
-import { Input } from "../components/Input/Input";
+import React, { useEffect, useState } from 'react';
+import { Navigate } from 'react-router-dom';
+import axios from 'axios';
+import Card from '../components/Card';
+import Pagination from '../components/Pagination/Pagination';
+import { Button } from '../components/Button/Button';
+import { Input } from '../components/Input/Input';
+import Header from '../components/Header';
 
 export const Upcoming = () => {
   const [upcomingList, setUpcomingList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState('');
+  const [login, setLogin] = useState(false);
   const movieURL = `https://api.themoviedb.org/3/movie/upcoming?api_key=7009bcbd203a44c230df630f8447bbc9&language=en-US&page=1`;
-  
+
   useEffect(() => {
     getMoviesList();
+    if (sessionStorage.getItem('login')) {
+      setLogin(true);
+    }
   }, []);
 
   const getMoviesList = () => {
@@ -29,7 +35,9 @@ export const Upcoming = () => {
   const paginate = (pageNumber) => {
     event.preventDefault();
     axios
-      .get(`https://api.themoviedb.org/3/movie/upcoming?api_key=7009bcbd203a44c230df630f8447bbc9&language=en-US&page=${pageNumber}`)
+      .get(
+        `https://api.themoviedb.org/3/movie/upcoming?api_key=7009bcbd203a44c230df630f8447bbc9&language=en-US&page=${pageNumber}`
+      )
       .then((res) => {
         setCurrentPage(pageNumber);
         setUpcomingList(res.data.results);
@@ -52,11 +60,12 @@ export const Upcoming = () => {
     }
   };
 
-  return (
+  return login ? (
     <>
+      <Header />
       <h1 className="home_header">Upcoming</h1>
       <div>
-        <form style={{ margin: "30px 0px" }}>
+        <form style={{ margin: '30px 0px' }}>
           <Input
             type="text"
             placeholder="Search..."
@@ -68,18 +77,19 @@ export const Upcoming = () => {
       <div
         className="App"
         style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          flexWrap: "wrap"
-        }}
-      >
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap'
+        }}>
         {upcomingList.map((item, index) => (
-            <Card list={item} key={index} />
-          ))}
+          <Card list={item} key={index} />
+        ))}
       </div>
       {upcomingList.length > 0 && <Pagination paginate={paginate} />}
     </>
+  ) : (
+    ""
   );
 };
 

@@ -4,6 +4,10 @@ body{
   font-family: "work sans";
 }
 
+.App{
+  margin-top: -15px;
+}
+
 header {
   position: fixed;
   display: flex;
@@ -123,7 +127,7 @@ header {
 }
 
 .home_header{
-  padding-top: 50px;
+  padding-top: 70px;
   background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
