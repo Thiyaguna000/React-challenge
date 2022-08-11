@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
-import FeaturedMovie from "../components/FeaturedMovie/FeaturedMovie";
-import Header from "../components/Header";
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import FeaturedMovie from '../components/FeaturedMovie/FeaturedMovie';
+import Header from '../components/Header';
 
 const Details = () => {
   const [moviesList, setMoviesList] = useState({});
@@ -26,10 +26,8 @@ const Details = () => {
 
   return (
     <>
-    <Header />
-    <div>
-      {Object.keys(moviesList).length && <FeaturedMovie moviesList={moviesList} />}
-    </div>
+      <Header />
+      <div>{Object.keys(moviesList).length && <FeaturedMovie moviesList={moviesList} />}</div>
     </>
   );
 };

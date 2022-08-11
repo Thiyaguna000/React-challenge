@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 import Card from '../components/Card';
 import Pagination from '../components/Pagination/Pagination';
@@ -9,7 +8,6 @@ import Header from '../components/Header';
 
 export const Home = () => {
   const [moviesList, setMoviesList] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
   const [searchValue, setSearchValue] = useState('');
   const [login, setLogin] = useState(false);
   const movieURL = `https://api.themoviedb.org/3/movie/popular?api_key=7009bcbd203a44c230df630f8447bbc9&language=en-US&page=1`;
@@ -39,7 +37,6 @@ export const Home = () => {
         `https://api.themoviedb.org/3/movie/popular?api_key=7009bcbd203a44c230df630f8447bbc9&language=en-US&page=${pageNumber}`
       )
       .then((res) => {
-        setCurrentPage(pageNumber);
         console.log(res.data.results);
         setMoviesList(res.data.results);
       })
@@ -89,7 +86,7 @@ export const Home = () => {
       {moviesList.length > 0 && <Pagination paginate={paginate} />}
     </>
   ) : (
-    ""
+    ''
   );
 };
 

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Button } from "./Button/Button";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Button } from './Button/Button';
 import './Card.css';
 
 /**
@@ -10,7 +10,7 @@ import './Card.css';
  * @returns
  *
  */
-const Card = ({ list } ) => {
+const Card = ({ list }) => {
   const [heart, setheart] = useState(1);
   const history = useNavigate();
 
@@ -24,7 +24,7 @@ const Card = ({ list } ) => {
 
   const detailsHandler = (id) => {
     history(`/details/${id}`);
-  }
+  };
 
   return (
     <>
@@ -32,10 +32,7 @@ const Card = ({ list } ) => {
         <div className="card">
           <div className="top_part">
             <small>
-              <i
-                onClick={Heart}
-                className={`fa ${heart ? "fa-heart-o" : "fa-heart"}`}
-              ></i>
+              <i onClick={Heart} className={`fa ${heart ? 'fa-heart-o' : 'fa-heart'}`}></i>
             </small>
           </div>
           <div className="image">
@@ -46,17 +43,23 @@ const Card = ({ list } ) => {
           </div>
           <div className="reviews">
             <p className="description">{list.overview}</p>
-            <h3 className="price">Popularity: <span className="popularity">{list.popularity}</span></h3>
+            <h3 className="price">
+              Popularity: <span className="popularity">{list.popularity}</span>
+            </h3>
           </div>
           <div>
-          <div className="last_buttons">
-            <p>Released:</p>
-            <div className="qty_btn">
-              <p>{list.release_date}</p>
-            </div>
+            <div className="last_buttons">
+              <p>Released:</p>
+              <div className="qty_btn">
+                <p>{list.release_date}</p>
+              </div>
             </div>
             <div className="money_bag">
-              <Button type="button" title="View Details" handleClick={()=>detailsHandler(list.id)} />
+              <Button
+                type="button"
+                title="View Details"
+                handleClick={() => detailsHandler(list.id)}
+              />
             </div>
           </div>
         </div>

@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
-import { Routes, Route, BrowserRouter, HashRouter } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import './global.css';
-import Header from './components/Header';
 import TopRated from './pages/TopRated';
 import Upcoming from './pages/Upcoming';
 import Details from './pages/Details';
@@ -32,7 +31,7 @@ const App = () => {
   return (
     <div className="App">
       <React.StrictMode>
-        <HashRouter>
+        <BrowserRouter>
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route exact path="/home" element={<Home />} />
@@ -41,7 +40,7 @@ const App = () => {
             <Route exact path="/details/:id" element={<Details />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </HashRouter>
+        </BrowserRouter>
       </React.StrictMode>
     </div>
   );
