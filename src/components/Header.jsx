@@ -34,7 +34,7 @@ export const Header = () => {
         <nav className="main-nav">
           <ul>
             <li>
-              <a href="/home">Home</a>
+              <a href="/React-challenge/#/home">Home</a>
             </li>
             <li>
               <a href="/React-challenge/#/toprated">Top Rated</a>
