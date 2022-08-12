@@ -34,16 +34,16 @@ export const Header = () => {
         <nav className="main-nav">
           <ul>
             <li>
-              <a href="/home">Home</a>
+              <a href="/React-challenge/#/home">Home</a>
             </li>
             <li>
-              <a href="/toprated">Top Rated</a>
+              <a href="/React-challenge/#/toprated">Top Rated</a>
             </li>
             <li>
-              <a href="/upcoming">Upcoming</a>
+              <a href="/React-challenge/#/upcoming">Upcoming</a>
             </li>
             <li onClick={handleLogout}>
-              <a href="/login">Logout</a>
+              <a href="/React-challenge/#/login">Logout</a>
             </li>
             <li>
               <span>

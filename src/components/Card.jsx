@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from './Button/Button';
@@ -23,7 +24,7 @@ const Card = ({ list }) => {
   };
 
   const detailsHandler = (id) => {
-    history(`/details/${id}`);
+    history(`/React-challenge/#/details/${id}`);
   };
 
   return (

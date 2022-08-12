@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 export const Input = ({ description, type, placeholder, inputHandler }) => {

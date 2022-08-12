@@ -6,9 +6,9 @@ const NotFound = () => {
 
   const backHandler = () => {
     if (sessionStorage.getItem('login')) {
-      history('/home');
+      history('/React-challenge/#/home');
     } else {
-      history('/login');
+      history('/React-challenge/#/login');
     }
   };
 
