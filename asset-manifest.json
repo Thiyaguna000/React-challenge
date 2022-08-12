@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/React-challenge/static/css/main.1ebcfca6.css",
-    "main.js": "/React-challenge/static/js/main.e5ec0713.js",
+    "main.js": "/React-challenge/static/js/main.7295dd75.js",
     "index.html": "/React-challenge/index.html",
     "main.1ebcfca6.css.map": "/React-challenge/static/css/main.1ebcfca6.css.map",
-    "main.e5ec0713.js.map": "/React-challenge/static/js/main.e5ec0713.js.map"
+    "main.7295dd75.js.map": "/React-challenge/static/js/main.7295dd75.js.map"
   },
   "entrypoints": [
     "static/css/main.1ebcfca6.css",
-    "static/js/main.e5ec0713.js"
+    "static/js/main.7295dd75.js"
   ]
 }
