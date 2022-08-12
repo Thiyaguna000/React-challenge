@@ -24,7 +24,7 @@ const Card = ({ list }) => {
   };
 
   const detailsHandler = (id) => {
-    history(`/React-challenge/#/details/${id}`);
+    history(`/details/${id}`);
   };
 
   return (
