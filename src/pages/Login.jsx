@@ -34,7 +34,7 @@ const Login = () => {
             position: toast.POSITION.TOP_RIGHT,
             autoClose: false
           });
-          history('/React-challenge/#/home');
+          history('/home');
           setErrorMessage(false);
         }
       })
@@ -58,7 +58,7 @@ const Login = () => {
                 .then((response) => {
                   if (response.status == 200) {
                     sessionStorage.setItem('login', true);
-                    history('/React-challenge/#/home');
+                    history('/home');
                   }
                 });
             })
